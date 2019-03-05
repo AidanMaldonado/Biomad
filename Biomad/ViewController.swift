@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var chems = 10
     //Text for dynamic events
     var currentText = ""
-    var textArray = [""]
+    var textArray = ["Store", "Chem Shop", "Police Station"]
     //Text for game opening
     var startText = ["A gunshot", "You jolt awake", "Was it a dream?", "You walk to your window", "The world is on fire", "You turn on your TV in a panic", "Banners across the news fill you in", "Your country is being invaded", "Your city is being invaded", "The lights go out", "3 days have passed", "You only have 10 hours of chems left", "You leave your apartment to find more"]
     var sTCount = 0
@@ -45,13 +45,13 @@ class ViewController: UIViewController {
             sTCount += 1
             currentText = startText[sTCount]
         } else { //Main Gameplay Loops
-            
+            let rand = Int.random(in: 0...(textArray.count - 1))
+            currentText = textArray[rand]
+            actionOneTitle = "Travel"
         }
         
         updateLabels()
     }
-    
-
 
 }
 
