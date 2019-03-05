@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //Game Variables
+    var chems = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
